@@ -1,0 +1,12 @@
+Simulation of Fly Agaric completed.
+Final Network Status:
+- Fungi(species=Fly Agaric, health=139.16666666666669)
+- Fungi(species=Fly Agaric, health=139.16666666666669)
+- Fungi(species=Fly Agaric, health=139.16666666666669)
+- Fungi(species=Fly Agaric_Spore_0, health=122.5)
+- Fungi(species=Fly Agaric_Spore_1, health=110.0)
+- Fungi(species=Fly Agaric_Spore_2, health=100)
+
+Hybrid Colony Created: Fungi(species=Fly Agaric-Fly Agaric, health=278.33333333333337)
+
+Total Network Biomass: 750.0 units

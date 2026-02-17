@@ -1,0 +1,18 @@
+[project]
+name = "mycelium-simulator"
+version = "0.1.0"
+description = "A biological network simulator for an Object Project"
+dependencies = [
+    "requests",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+myco-sim = "mycelium_simulator.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mycelium_simulator"]
