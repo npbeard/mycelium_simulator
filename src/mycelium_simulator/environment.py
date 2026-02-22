@@ -1,10 +1,5 @@
-import os
 import requests
 import datetime
-import re
-from dotenv import load_dotenv
-
-load_dotenv() # Load .env file
 
 def weather_check(func): # Decorator
     def wrapper(*args, **kwargs):

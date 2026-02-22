@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "A biological network simulator for an Object Project"
 dependencies = [
     "requests",
-    "python-dotenv",
 ]
 
 [build-system]

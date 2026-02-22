@@ -8,9 +8,9 @@ from mycelium_simulator.utils import calculate_spread
 
 SIMULATION_VERSION = "2.0.1"
 
-def run_simulation(species_name, initial_depth):
+def run_simulation(species_name, initial_depth, latitude, longitude):
     # Latitude: -3.1, Longitude: -60.0 (Manaus, Brazil)
-    world = World(lat=-3.1, lon=-60.0)
+    world = World(lat=latitude, lon=longitude)
     mycelium = Fungi(species_name, "Standard")
     
     # Paths
@@ -60,10 +60,15 @@ def run_simulation(species_name, initial_depth):
 
         f.write(f"\nTotal Network Biomass: {total_biomass} units")
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Mycelium Simulator")
     parser.add_argument("--species", default="Amanita")
     parser.add_argument("--depth", type=int, default=3)
+    parser.add_argument("--lat", type=float, default=-3.1, help="Latitude for weather data")
+    parser.add_argument("--lon", type=float, default=-60.0, help="Longitude for weather data")
     args = parser.parse_args()
     
-    run_simulation(args.species, args.depth)
+    run_simulation(args.species, args.depth, args.lat, args.lon)
+
+if __name__ == "__main__":
+    main()

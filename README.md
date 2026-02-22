@@ -18,13 +18,11 @@ Complexity Modeling: Uses recursive algorithms to calculate theoretical branchin
 ## Installation
 This project uses hatchling as a build backend. Ensure you have the dependencies installed:
 
-Bash
-pip install requests python-dotenv
+pip install requests
 ## Usage
 Run the simulation from the root directory using the main.py entry point. You can specify the fungus species and the depth of the simulation.
 
-Bash
-python main.py --species "Amanita" --depth 5
+uv run python -m mycelium_simulator.main --species "Fly Agaric" --depth 5 --lat -3.1 --lon -60.0
 ### Arguments
 
 --species: The name of the fungi species (Default: Amanita).
