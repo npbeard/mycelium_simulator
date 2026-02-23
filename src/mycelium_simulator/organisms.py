@@ -1,4 +1,5 @@
 import uuid
+import random
 from dataclasses import dataclass
 
 @dataclass(frozen=True) # Immutable attributes
@@ -18,7 +19,8 @@ class Fungi(Organism):
         super().__init__(name)
         self.strain = strain
         self.nutrients = kwargs.get("initial_nutrients", 100) # Mutable
-        self.dna = GeneticCode("ATCG-MYCO")
+        random_sequence = "".join(random.choices("ATCG", k=10))
+        self.dna = GeneticCode(random_sequence)
         self.network = [] # Composition: List of connected nodes
 
     def __add__(self, other): # Magic Method: Merging colonies

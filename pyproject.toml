@@ -2,6 +2,7 @@
 name = "mycelium-simulator"
 version = "0.1.0"
 description = "A biological network simulator for an Object Project"
+requires-python = ">=3.11"
 dependencies = [
     "requests",
 ]
