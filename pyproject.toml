@@ -15,4 +15,4 @@ build-backend = "hatchling.build"
 myco-sim = "mycelium_simulator.main:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/mycelium_simulator"]
+packages = ["mycelium_simulator"]
