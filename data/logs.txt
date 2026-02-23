@@ -7,7 +7,7 @@ Final Network Status:
 - Fungi(species=Fly Agaric_Spore_1, health=125.47619047619047)
 - Fungi(species=Fly Agaric_Spore_2, health=115.47619047619047)
 - Fungi(species=Fly Agaric_Spore_3, health=107.14285714285714)
-- Fungi(species=Fly Agaric_Spore_4, health=100)
+- Fungi(species=Fly Agaric_Spore_4, health=100.0)
 
 Hybrid Colony Created: Fungi(species=Fly Agaric-Fly Agaric, health=309.28571428571433)
 

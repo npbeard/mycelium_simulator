@@ -8,10 +8,10 @@ from mycelium_simulator.utils import calculate_spread
 
 SIMULATION_VERSION = "2.0.1"
 
-def run_simulation(species_name, initial_depth, latitude, longitude):
+def run_simulation(species_name, initial_depth, latitude, longitude, init_nutrients):
     # Latitude: -3.1, Longitude: -60.0 (Manaus, Brazil)
     world = World(lat=latitude, lon=longitude)
-    mycelium = Fungi(species_name, "Standard")
+    mycelium = Fungi(species_name, "Standard", initial_nutrients=init_nutrients)
     
     # Paths
     log_path = Path("data/logs.txt")
@@ -66,9 +66,10 @@ def main():
     parser.add_argument("--depth", type=int, default=3)
     parser.add_argument("--lat", type=float, default=-3.1, help="Latitude for weather data")
     parser.add_argument("--lon", type=float, default=-60.0, help="Longitude for weather data")
+    parser.add_argument("--nutrients", type=float, default=100.0, help="Starting nutrient level")
     args = parser.parse_args()
     
-    run_simulation(args.species, args.depth, args.lat, args.lon)
+    run_simulation(args.species, args.depth, args.lat, args.lon, args.nutrients)
 
 if __name__ == "__main__":
     main()
